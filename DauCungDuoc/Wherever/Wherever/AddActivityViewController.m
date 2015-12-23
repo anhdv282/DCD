@@ -8,6 +8,7 @@
 
 #import "AddActivityViewController.h"
 #import "Macro.h"
+#import "Activity.h"
 @interface AddActivityViewController ()
 
 @end
@@ -30,6 +31,7 @@
 }
 
 - (IBAction)btnAddTapped:(id)sender {
+    [self addNewActivity];
 }
 
 - (void)showAnimate {
@@ -71,4 +73,13 @@
     [self removeAnimate];
 }
 
+#pragma mark Add new
+- (void) initActivity {
+    if (!self.activity) {
+//        self.activity = [Activity createEntity];
+    }
+}
+- (void) addNewActivity {
+    
+}
 @end

@@ -46,10 +46,7 @@
     self.valueLabel.text = newValue;
     
 }
-// ấn btn
-// xoay
-// tính radian ra trong khoảng -> xác định được góc
-// chuyển về mid value của Clove
+
 - (IBAction)btnRollTapped:(id)sender {
     [self reset];
     timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(rollBall) userInfo:nil repeats:YES];

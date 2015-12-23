@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043E72661C2941C800707485 /* Activity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 043E72631C2941C800707485 /* Activity+CoreDataProperties.m */; };
+		043E72671C2941C800707485 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 043E72651C2941C800707485 /* Activity.m */; };
 		0442A5621C2298F300C5CC85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442A5611C2298F300C5CC85 /* main.m */; };
 		0442A5651C2298F300C5CC85 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442A5641C2298F300C5CC85 /* AppDelegate.m */; };
 		0442A5681C2298F300C5CC85 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442A5671C2298F300C5CC85 /* ViewController.m */; };
@@ -20,7 +22,6 @@
 		0442A5A41C229D9000C5CC85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0442A5A31C229D9000C5CC85 /* Assets.xcassets */; };
 		0442A5A61C229DAF00C5CC85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0442A5A51C229DAF00C5CC85 /* Main.storyboard */; };
 		0442A5A91C229E0F00C5CC85 /* SelectActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442A5A81C229E0F00C5CC85 /* SelectActivityViewController.m */; };
-		0442A5AC1C22B23000C5CC85 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442A5AB1C22B23000C5CC85 /* Activity.m */; };
 		0442A5B01C22B52000C5CC85 /* AddActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442A5AE1C22B52000C5CC85 /* AddActivityViewController.m */; };
 		0442A5B11C22B52000C5CC85 /* AddActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0442A5AF1C22B52000C5CC85 /* AddActivityViewController.xib */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		043E72621C2941C800707485 /* Activity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Activity+CoreDataProperties.h"; path = "../Activity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		043E72631C2941C800707485 /* Activity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Activity+CoreDataProperties.m"; path = "../Activity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		043E72641C2941C800707485 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Activity.h; path = ../Activity.h; sourceTree = "<group>"; };
+		043E72651C2941C800707485 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Activity.m; path = ../Activity.m; sourceTree = "<group>"; };
+		043E72681C29429E00707485 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		0442A55D1C2298F300C5CC85 /* Wherever.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wherever.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0442A5611C2298F300C5CC85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0442A5631C2298F300C5CC85 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,8 +75,6 @@
 		0442A5A51C229DAF00C5CC85 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0442A5A71C229E0F00C5CC85 /* SelectActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectActivityViewController.h; sourceTree = "<group>"; };
 		0442A5A81C229E0F00C5CC85 /* SelectActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectActivityViewController.m; sourceTree = "<group>"; };
-		0442A5AA1C22B23000C5CC85 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
-		0442A5AB1C22B23000C5CC85 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		0442A5AD1C22B52000C5CC85 /* AddActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddActivityViewController.h; sourceTree = "<group>"; };
 		0442A5AE1C22B52000C5CC85 /* AddActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddActivityViewController.m; sourceTree = "<group>"; };
 		0442A5AF1C22B52000C5CC85 /* AddActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddActivityViewController.xib; sourceTree = "<group>"; };
@@ -134,16 +138,12 @@
 				0442A5A31C229D9000C5CC85 /* Assets.xcassets */,
 				0442A5661C2298F300C5CC85 /* ViewController.h */,
 				0442A5671C2298F300C5CC85 /* ViewController.m */,
-				0442A5A71C229E0F00C5CC85 /* SelectActivityViewController.h */,
-				0442A5A81C229E0F00C5CC85 /* SelectActivityViewController.m */,
-				0442A5AD1C22B52000C5CC85 /* AddActivityViewController.h */,
-				0442A5AE1C22B52000C5CC85 /* AddActivityViewController.m */,
-				0442A5AF1C22B52000C5CC85 /* AddActivityViewController.xib */,
 				0442A5A51C229DAF00C5CC85 /* Main.storyboard */,
 				0442A5711C2298F300C5CC85 /* LaunchScreen.storyboard */,
 				0442A5741C2298F300C5CC85 /* Info.plist */,
 				0442A56C1C2298F300C5CC85 /* Wherever.xcdatamodeld */,
 				0442A5601C2298F300C5CC85 /* Supporting Files */,
+				043E72681C29429E00707485 /* PrefixHeader.pch */,
 			);
 			path = Wherever;
 			sourceTree = "<group>";
@@ -177,10 +177,12 @@
 		0442A5961C229A3A00C5CC85 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				043E72621C2941C800707485 /* Activity+CoreDataProperties.h */,
+				043E72631C2941C800707485 /* Activity+CoreDataProperties.m */,
+				043E72641C2941C800707485 /* Activity.h */,
+				043E72651C2941C800707485 /* Activity.m */,
 				0442A5981C229D4500C5CC85 /* DCDCLove.h */,
 				0442A5991C229D4500C5CC85 /* DCDCLove.m */,
-				0442A5AA1C22B23000C5CC85 /* Activity.h */,
-				0442A5AB1C22B23000C5CC85 /* Activity.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -198,6 +200,7 @@
 		0442A59F1C229D6500C5CC85 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				04EB247E1C280E190031744B /* Select */,
 				0442A5A01C229D7500C5CC85 /* DCDViewController.h */,
 				0442A5A11C229D7500C5CC85 /* DCDViewController.m */,
 			);
@@ -210,6 +213,26 @@
 				0442A5B21C22C95600C5CC85 /* Macro.h */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		04EB247E1C280E190031744B /* Select */ = {
+			isa = PBXGroup;
+			children = (
+				04EB247F1C280E280031744B /* Add */,
+				0442A5A71C229E0F00C5CC85 /* SelectActivityViewController.h */,
+				0442A5A81C229E0F00C5CC85 /* SelectActivityViewController.m */,
+			);
+			name = Select;
+			sourceTree = "<group>";
+		};
+		04EB247F1C280E280031744B /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				0442A5AD1C22B52000C5CC85 /* AddActivityViewController.h */,
+				0442A5AE1C22B52000C5CC85 /* AddActivityViewController.m */,
+				0442A5AF1C22B52000C5CC85 /* AddActivityViewController.xib */,
+			);
+			name = Add;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,11 +370,12 @@
 				0442A59A1C229D4500C5CC85 /* DCDCLove.m in Sources */,
 				0442A5681C2298F300C5CC85 /* ViewController.m in Sources */,
 				0442A5B01C22B52000C5CC85 /* AddActivityViewController.m in Sources */,
-				0442A5AC1C22B23000C5CC85 /* Activity.m in Sources */,
+				043E72661C2941C800707485 /* Activity+CoreDataProperties.m in Sources */,
 				0442A59E1C229D5100C5CC85 /* DCDRotaryWheel.m in Sources */,
 				0442A56E1C2298F300C5CC85 /* Wherever.xcdatamodeld in Sources */,
 				0442A5A91C229E0F00C5CC85 /* SelectActivityViewController.m in Sources */,
 				0442A5651C2298F300C5CC85 /* AppDelegate.m in Sources */,
+				043E72671C2941C800707485 /* Activity.m in Sources */,
 				0442A5621C2298F300C5CC85 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +507,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/vietanhdang/Desktop/Pet Projects/Đâu cũng được/DauCungDuoc/Wherever/Wherever/PrefixHeader.pch";
 				INFOPLIST_FILE = Wherever/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.vclon.Wherever;
@@ -494,6 +520,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/vietanhdang/Desktop/Pet Projects/Đâu cũng được/DauCungDuoc/Wherever/Wherever/PrefixHeader.pch";
 				INFOPLIST_FILE = Wherever/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.vclon.Wherever;
@@ -568,6 +596,7 @@
 				0442A58F1C2298F300C5CC85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0442A5901C2298F300C5CC85 /* Build configuration list for PBXNativeTarget "WhereverTests" */ = {
 			isa = XCConfigurationList;
@@ -576,6 +605,7 @@
 				0442A5921C2298F300C5CC85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0442A5931C2298F300C5CC85 /* Build configuration list for PBXNativeTarget "WhereverUITests" */ = {
 			isa = XCConfigurationList;
@@ -584,6 +614,7 @@
 				0442A5951C2298F300C5CC85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

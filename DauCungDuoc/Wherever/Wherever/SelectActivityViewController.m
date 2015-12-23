@@ -20,21 +20,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    arrayData = [[NSMutableArray alloc] initWithArray:@[@"Abc",@"def",@"ghj"]];
+    arrayData = [[NSMutableArray alloc] init];
     addVC = [[AddActivityViewController alloc] init];
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)rightBarButtonTapped:(UIBarButtonItem *)sender {
+- (IBAction)leftBarButtonTapped:(UIButton *)sender {
+//    [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)rightBarButtonTapped:(UIButton *)sender {
     if (self.tableViewData.editing) {
         [self.tableViewData setEditing:false animated:YES];
-        [self.btnRightBar setTitle:@"Edit"];
+        self.lblRightButton.text = @"Edit";
+        
     } else {
         [self.tableViewData setEditing:true animated:YES];
-        [self.btnRightBar setTitle:@"Done"];
+        self.lblRightButton.text = @"Done";
     }
 }
 
@@ -45,7 +53,7 @@
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     UILabel *label = (UILabel*)[cell viewWithTag:1];
-    UIImageView *imageView = (UIImageView*)[cell viewWithTag:2];
+//    UIImageView *imageView = (UIImageView*)[cell viewWithTag:2];
     label.text = [arrayData objectAtIndex:indexPath.row];
     return cell;
 }

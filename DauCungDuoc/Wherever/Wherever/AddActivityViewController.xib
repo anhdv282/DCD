@@ -18,13 +18,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pjY-j8-zZl">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="yr8-Z4-ViC" appends="YES" id="qxk-C0-g8I"/>
+                    </connections>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEy-TW-9U7">
                     <rect key="frame" x="60" y="120" width="255" height="400"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="icon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aae-1S-fca">
                             <rect key="frame" x="111" y="87" width="32.5" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.36862745099999999" green="0.1843137255" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BNF-gl-FGt">
@@ -50,7 +57,7 @@
                                 <constraint firstAttribute="height" constant="21" id="Lb2-v5-aJc"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.36862745099999999" green="0.1843137255" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BKX-Qi-dG5">
@@ -65,7 +72,9 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="GBn-12-tlD"/>
                             </constraints>
-                            <state key="normal" title="Add"/>
+                            <state key="normal" title="Add">
+                                <color key="titleColor" red="0.36862745099999999" green="0.1843137255" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
                             <connections>
                                 <action selector="btnAddTapped:" destination="-1" eventType="touchUpInside" id="NNg-ij-sck"/>
                             </connections>
@@ -103,10 +112,14 @@
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <gestureRecognizers/>
             <constraints>
+                <constraint firstItem="pjY-j8-zZl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9N4-4J-ljL"/>
                 <constraint firstItem="FEy-TW-9U7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="120" id="Q1B-CH-p8c"/>
                 <constraint firstAttribute="trailing" secondItem="FEy-TW-9U7" secondAttribute="trailing" constant="60" id="RVM-Jt-rDJ"/>
+                <constraint firstAttribute="bottom" secondItem="pjY-j8-zZl" secondAttribute="bottom" id="VPx-9H-eGK"/>
                 <constraint firstItem="FEy-TW-9U7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dTy-do-ueO"/>
                 <constraint firstItem="FEy-TW-9U7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="h5Q-al-h2X"/>
+                <constraint firstAttribute="trailing" secondItem="pjY-j8-zZl" secondAttribute="trailing" id="jWN-MA-nUp"/>
+                <constraint firstItem="pjY-j8-zZl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nSV-Vd-VOv"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <variation key="default">
@@ -114,9 +127,6 @@
                     <exclude reference="dTy-do-ueO"/>
                 </mask>
             </variation>
-            <connections>
-                <outletCollection property="gestureRecognizers" destination="yr8-Z4-ViC" appends="YES" id="5iZ-ZZ-LvX"/>
-            </connections>
             <point key="canvasLocation" x="279.5" y="294.5"/>
         </view>
         <tapGestureRecognizer id="yr8-Z4-ViC">

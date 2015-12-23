@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "AddActivityViewController.h"
-
 @interface SelectActivityViewController : UIViewController<UITabBarDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewData;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *btnRightBar;
+@property (weak, nonatomic) IBOutlet UIButton *btnRightBar;
 @property (weak, nonatomic) IBOutlet UIButton *btnBottom;
+@property (weak, nonatomic) IBOutlet UILabel *lblRightButton;
 
 @end

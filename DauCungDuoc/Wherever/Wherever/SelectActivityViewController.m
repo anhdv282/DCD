@@ -7,7 +7,7 @@
 //
 
 #import "SelectActivityViewController.h"
-
+#import "Activity.h"
 @interface SelectActivityViewController () {
     NSMutableArray *arrayData;
     AddActivityViewController *addVC;
@@ -20,12 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    arrayData = [[NSMutableArray alloc] init];
     addVC = [[AddActivityViewController alloc] init];
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
+    arrayData = [[Activity findAll] mutableCopy];
+    [self.tableViewData reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,9 +54,10 @@
 #pragma mark TableView Datasource
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    Activity *activity = arrayData[indexPath.row];
     UILabel *label = (UILabel*)[cell viewWithTag:1];
 //    UIImageView *imageView = (UIImageView*)[cell viewWithTag:2];
-    label.text = [arrayData objectAtIndex:indexPath.row];
+    label.text = activity.name;
     return cell;
 }
 
@@ -63,17 +66,24 @@
 }
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    Activity *activityToRemove = arrayData[indexPath.row];
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [arrayData removeObjectAtIndex:indexPath.row];
-        [tableView reloadData];
+        [activityToRemove deleteEntity];
+        [self saveContext];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
 
 -(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
-    NSString *newString = [[NSString alloc] init];
-    newString = arrayData[sourceIndexPath.row];
+    Activity *newActivity = arrayData[sourceIndexPath.row];
     [arrayData removeObjectAtIndex:sourceIndexPath.row];
-    [arrayData insertObject:newString atIndex:destinationIndexPath.row];
+    [arrayData insertObject:newActivity atIndex:destinationIndexPath.row];
+    [self saveContext];
 }
 
+- (void)saveContext {
+    //sử dụng ManagedObjectContext để lưu
+    [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
+}
 @end

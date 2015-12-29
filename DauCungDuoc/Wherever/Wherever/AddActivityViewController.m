@@ -25,6 +25,10 @@
     self.view.center = CGPointMake(SCREEN_WIDTH_PORTRAIT/2, -SCREEN_HEIGHT_PORTRAIT/2);
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:YES];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -74,12 +78,33 @@
 }
 
 #pragma mark Add new
-- (void) initActivity {
-    if (!self.activity) {
-//        self.activity = [Activity createEntity];
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if ([textField.text length] > 0) {
+        self.activity.name = textField.text;
     }
 }
+
+- (void) initActivity {
+    if (!self.activity) {
+        self.activity = [Activity createEntity];
+    }
+}
+
 - (void) addNewActivity {
     
+}
+
+//luu
+-(void)saveContext
+{
+    [[NSManagedObjectContext defaultContext] saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
+            if (success) {
+            NSLog(@"you sucessfully saved your context");
+        }
+        else
+        {
+            NSLog(@"Error saving context: %@", error.description);
+        }    }];
 }
 @end

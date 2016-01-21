@@ -26,7 +26,8 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
-    arrayData = [[Activity findAll] mutableCopy];
+    arrayData = [[NSMutableArray alloc] init];
+    arrayData = [[Activity MR_findAll] mutableCopy];
     [self.tableViewData reloadData];
 }
 
@@ -69,7 +70,7 @@
     Activity *activityToRemove = arrayData[indexPath.row];
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [arrayData removeObjectAtIndex:indexPath.row];
-        [activityToRemove deleteEntity];
+        [activityToRemove MR_deleteEntity];
         [self saveContext];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
@@ -84,6 +85,6 @@
 
 - (void)saveContext {
     //sử dụng ManagedObjectContext để lưu
-    [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
+//    [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
 }
 @end

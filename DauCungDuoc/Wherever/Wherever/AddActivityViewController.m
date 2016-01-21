@@ -87,7 +87,7 @@
 
 - (void) initActivity {
     if (!self.activity) {
-        self.activity = [Activity createEntity];
+        self.activity = [Activity MR_createEntity];
     }
 }
 
@@ -98,13 +98,13 @@
 //luu
 -(void)saveContext
 {
-    [[NSManagedObjectContext defaultContext] saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
-            if (success) {
-            NSLog(@"you sucessfully saved your context");
-        }
-        else
-        {
-            NSLog(@"Error saving context: %@", error.description);
-        }    }];
+//    [[NSManagedObjectContext defaultContext] saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
+//            if (success) {
+//            NSLog(@"you sucessfully saved your context");
+//        }
+//        else
+//        {
+//            NSLog(@"Error saving context: %@", error.description);
+//        }    }];
 }
 @end
